@@ -1,6 +1,6 @@
 # Cable Modem Stats
 
-This is a Python script to scrape stats from the Arris SB8200, Arris S33, and Comcast XB8 cable modem web interface. Results are meant to be sent to InfluxDB 2.x for use with Grafana, but other targets could be added.
+This is a Python script to scrape stats from the Arris SB8200, Arris S33, Arris S34, and Comcast XB8 cable modem web interface. Results are meant to be sent to InfluxDB 2.x for use with Grafana, but other targets could be added.
 
 This project is based off of:
 - https://github.com/andrewfraley/arris_cable_modem_stats
