@@ -41,6 +41,11 @@ def main():
     get_credential = arris_stats_s33.get_credential
     get_data = arris_stats_s33.get_json
     parse_data = arris_stats_s33.parse_json
+  elif modem_model == 's34':
+    import arris_stats_s34
+    get_credential = arris_stats_s34.get_credential
+    get_data = arris_stats_s34.get_json
+    parse_data = arris_stats_s34.parse_json
   elif modem_model == 'xb8':
     import comcast_xb8_stats
     get_credential = comcast_xb8_stats.get_credential
@@ -63,7 +68,7 @@ def main():
       time.sleep(sleep_interval)
     first = False
 
-    if config['modem_auth_required'] or modem_model == 's33' or modem_model == 'xb8':
+    if config['modem_auth_required'] or modem_model == 's34' or modem_model == 's33' or modem_model == 'xb8':
       while not credential:
         credential = get_credential(config)
         if not credential and config['exit_on_auth_error']:
